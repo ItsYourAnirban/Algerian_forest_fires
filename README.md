@@ -1,27 +1,45 @@
 # Algerian_forest_fires
 
-A self-developed machine learning project to predict forest fire occurrences in two major regions of Algeria — Bejaia and Sidi Bel-abbes — using weather and environmental data from the summer season of 2012.
+A machine learning project to predict forest fire occurrences in two major regions of Algeria, Bejaia and Sidi Bel-abbes, using meteorological and environmental data collected during the summer of 2012.
 
 ## 🔥 Project Description
 
-This repository contains a binary classification model that predicts whether a forest fire is likely to occur based on meteorological features like temperature, humidity, wind speed, rainfall, and calculated fire weather indices (FFMC, DMC, DC, ISI, BUI, FWI).
+This project implements a binary classification model to determine the likelihood of a forest fire based on key weather-related features such as temperature, humidity, wind speed, rainfall, and fire weather indices (FFMC, DMC, DC, ISI, BUI, FWI).
 
-The model was built **from scratch** using hands-on ML workflows including data preprocessing, EDA, model training, evaluation, and interpretation.
+The pipeline includes data preprocessing, exploratory data analysis (EDA), model training using multiple algorithms, and evaluation using standard classification metrics.
 
 ---
 
 ## 📁 Dataset Overview
 
-- **Instances**: 244 rows (138 fire, 106 no-fire)
+- **Total Records**: 244 (138 fire, 106 no-fire)
 - **Features**:
   - Temperature (°C)
   - Relative Humidity (%)
   - Wind Speed (km/h)
   - Rainfall (mm)
-  - FFMC, DMC, DC, ISI, BUI, FWI (fire weather indices)
-- **Target**: `Classes` → Fire / Not Fire
+  - FFMC, DMC, DC, ISI, BUI, FWI
+- **Target Variable**: `Classes` → Fire / Not Fire
 
 ---
+
+## 📌 Project Workflow
+
+```bash
+1. Data Preprocessing and Cleaning
+2. Exploratory Data Analysis (EDA)
+3. Feature Engineering
+4. Model Training:
+   - Logistic Regression
+   - Random Forest
+   - Ridge Classifier
+5. Model Evaluation:
+   - Accuracy
+   - Precision
+   - Recall
+   - F1-Score
+6. Result Analysis and Summary
+
 
 
 ## 📌 Project Workflow
