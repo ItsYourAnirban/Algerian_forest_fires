@@ -1,48 +1,50 @@
-# Algerian Forest Fires Prediction Pipeline
+# Algerian_forest_fires
 
-## Overview
-This project implements a structured machine learning pipeline to analyze and predict forest fire occurrences in Algeria using meteorological data. The pipeline covers data ingestion, cleaning, exploratory data analysis (EDA), modeling, evaluation, and deployment-ready components.
+A self-developed machine learning project to predict forest fire occurrences in two major regions of Algeria — Bejaia and Sidi Bel-abbes — using weather and environmental data from the summer season of 2012.
 
-## Dataset
-- **Source**: Algerian Forest Fires dataset containing weather metrics from Bejaia and Sidi‑Bel Abbes regions (June–September 2012), comprising ~244 samples with features like temperature, humidity, wind speed, rainfall, and fire occurrence labels.
-- **Files**:
-  - `Algerian_forest_fires_dataset_UPDATE.csv` – raw combined dataset
-  - `Algerian_forest_fires_cleaned_dataset.csv` – processed and cleaned version
+## 🔥 Project Description
 
-## Key Components
-- **Model Training Notebook** (`Model Training.ipynb`): End-to-end pipeline including loading data, preprocessing, model training, and evaluation.
-- Other notebooks demonstrating regression techniques:
-  - `Practical Simple Linear Regression.ipynb`
-  - `Polynomial Regression Implementation.ipynb`
-  - `Multiple Linear Regression‑ Economics Dataset.ipynb`
-  - `Ridge, Lasso Regression.ipynb`
-- Supporting documents:
-  - `Ridge,Lasso And Elasticnet.pdf`
-  - `Types Of Cross Validation.pdf`
+This repository contains a binary classification model that predicts whether a forest fire is likely to occur based on meteorological features like temperature, humidity, wind speed, rainfall, and calculated fire weather indices (FFMC, DMC, DC, ISI, BUI, FWI).
 
-## Workflow
-1. **Data Loading**: Read the raw `.csv` containing weather and fire indicators.
-2. **Cleaning & Preprocessing**: Handle missing values, standardize formatting, and enhance feature readability.
-3. **Exploratory Analysis**: Generate visualizations and compute correlations to understand feature relationships.
-4. **Modeling**:
-   - Train and compare models such as Logistic Regression, Random Forest, and others.
-   - Tune hyperparameters and select the best performing model.
-5. **Evaluation**: Use metrics like accuracy, precision, recall, F1‑score, and ROC‑AUC.
-6. **Future Steps**: Consider model deployment or integration into real-time monitoring tools.
+The model was built **from scratch** using hands-on ML workflows including data preprocessing, EDA, model training, evaluation, and interpretation.
 
-## Getting Started
+---
+
+## 📁 Dataset Overview
+
+- **Instances**: 244 rows (138 fire, 106 no-fire)
+- **Features**:
+  - Temperature (°C)
+  - Relative Humidity (%)
+  - Wind Speed (km/h)
+  - Rainfall (mm)
+  - FFMC, DMC, DC, ISI, BUI, FWI (fire weather indices)
+- **Target**: `Classes` → Fire / Not Fire
+
+---
+
+
+## 📌 Project Workflow
 
 ```bash
-# Clone repository
-git clone <repo_url>
-cd <repository_folder>
+1. Data Cleaning and Preprocessing
+2. Exploratory Data Analysis (EDA)
+3. Feature Engineering and Correlation Mapping
+4. Model Building:
+   - Logistic Regression
+   - Random Forest
+   - Ridge Classifier
+5. Evaluation using Accuracy, Precision, Recall, F1-Score
+6. Final Model Selection and Summary Insights
 
-# (Optional) Set up virtual environment
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+
+# Clone the repository
+git clone https://github.com/ItsYourAnirban/Algerian_forest_fires.git
+cd Algerian_forest_fires
+
+# Install required packages
 pip install -r requirements.txt
 
-# Launch Jupyter and explore notebooks
-jupyter notebook
+# Run the main script
+python main.py
